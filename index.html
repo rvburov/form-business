@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заявка для дистрибьютора</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Производственная компания "ГУМИЛАБ"</h2>
+        <h1>ЗАЯВКА ДЛЯ ДИСТРИБЬЮТОРА</h1>
+        <form id="business-form">
+
+            <!-- Информация о компании -->
+            <div class="form-group">
+                <label for="company-name">Название компании <span class="asterisk">*</span></label>
+                <input type="text" id="company-name" name="company-name" placeholder="Введите название вашей компании" required>
+            </div>
+            <div class="form-group">
+                <label for="company-address">Юридический адрес <span class="asterisk">*</span></label>
+                <input type="text" id="company-address" name="company-address" placeholder="Введите юридический адрес" required>
+            </div>
+            <div class="form-group">
+                <label for="contact-person">Контактное лицо (ФИО) <span class="asterisk">*</span></label>
+                <input type="text" id="contact-person" name="contact-person" placeholder="Введите ФИО контактного лица" required>
+            </div>
+            <div class="form-group">
+                <label for="position">Должность <span class="asterisk">*</span></label>
+                <input type="text" id="position" name="position" placeholder="Введите должность" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Телефон для связи <span class="asterisk">*</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="Введите ваш телефон" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email <span class="asterisk">*</span></label>
+                <input type="email" id="email" name="email" placeholder="Введите ваш email" required>
+            </div>
+            <div class="form-group">
+                <label for="website">Сайт компании</label>
+                <input type="text" id="website" name="website" placeholder="Введите сайт (если есть)">
+            </div>
+
+            <!-- Описание бизнеса -->
+            <div class="form-group">
+                <label for="business-type">Тип вашей деятельности <span class="asterisk">*</span></label>
+                <select id="business-type" name="business-type" required>
+                    <option value="wholesale">Оптовая торговля</option>
+                    <option value="retail">Розничная торговля</option>
+                    <option value="online">Интернет-магазин</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="industry-experience">Опыт работы в вашей отрасли</label>
+                <textarea id="industry-experience" name="industry-experience" placeholder="Укажите, если есть опыт работы с подобными товарами или услугами"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="current-partners">Текущие партнеры</label>
+                <input type="text" id="current-partners" name="current-partners" placeholder="Укажите текущих партнеров (если есть)">
+            </div>
+            <div class="form-group">
+                <label for="regions">Основные регионы продаж</label>
+                <input type="text" id="regions" name="regions" placeholder="Укажите регионы, в которых вы продаете">
+            </div>
+
+            <!-- Запрос на продукцию -->
+            <div class="form-group">
+                <label for="products">Какие продукты или услуги вы хотите дистрибутировать? <span class="asterisk">*</span></label>
+                <textarea id="products" name="products" placeholder="Укажите, какие продукты или услуги вам интересны" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="sales-volume">Ожидаемый объем продаж</label>
+                <input type="number" id="sales-volume" name="sales-volume" placeholder="Например, ежемесячно">
+            </div>
+            <div class="form-group">
+                <label for="exclusive-rights">Нуждаетесь ли вы в эксклюзивных правах на продажу? <span class="asterisk">*</span></label>
+                <div class="checkbox-group">
+                    <input type="radio" id="exclusive-yes" name="exclusive-rights" value="yes" required>
+                    <label for="exclusive-yes">Да</label>
+                    <input type="radio" id="exclusive-no" name="exclusive-rights" value="no">
+                    <label for="exclusive-no">Нет</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="marketing-support">Готовы ли вы обеспечивать маркетинговую поддержку? <span class="asterisk">*</span></label>
+                <div class="checkbox-group">
+                    <input type="radio" id="marketing-yes" name="marketing-support" value="yes" required>
+                    <label for="marketing-yes">Да</label>
+                    <input type="radio" id="marketing-no" name="marketing-support" value="no">
+                    <label for="marketing-no">Нет</label>
+                </div>
+            </div>
+
+            <!-- Дополнительные вопросы -->
+            <div class="form-group">
+                <label for="sales-channels">Какие каналы продаж вы используете?</label>
+                <input type="text" id="sales-channels" name="sales-channels" placeholder="Например, физические магазины, интернет-магазин, оптовая сеть">
+            </div>
+            <div class="form-group">
+                <label for="international-shipments">Есть ли у вас опыт работы с международными поставками?</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="intl-yes" name="international-shipments" value="yes">
+                    <label for="intl-yes">Да</label>
+                    <input type="radio" id="intl-no" name="international-shipments" value="no">
+                    <label for="intl-no">Нет</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="promotion-plans">Как вы планируете продвигать продукцию?</label>
+                <textarea id="promotion-plans" name="promotion-plans" placeholder="Опишите ваши планы по продвижению продукции"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="partnership-terms">Какие гарантии/условия для сотрудничества вы ожидаете?</label>
+                <textarea id="partnership-terms" name="partnership-terms" placeholder="Укажите условия, которые для вас важны"></textarea>
+            </div>
+
+            <!-- Согласие с условиями -->
+            <div class="form-group">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="agreement" name="agreement" required>
+                    <label for="agreement">Я подтверждаю, что вся информация, предоставленная в форме, является точной и достоверной. <span class="asterisk">*</span></label>
+                </div>
+            </div>
+
+            <!-- Дополнительные комментарии -->
+            <div class="form-group">
+                <label for="additional-comments">Дополнительные комментарии</label>
+                <textarea id="additional-comments" name="additional-comments" placeholder="Пожалуйста, укажите любые дополнительные вопросы или информацию"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Отправить</button>
+            </div>
+
+        </form>
+
+        <!-- Уведомление о обязательных полях -->
+        <p class="required-fields-notice">
+            <strong>Все поля, помеченные звездочкой (<span class="asterisk">*</span>), обязательны для заполнения.</strong>
+        </p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

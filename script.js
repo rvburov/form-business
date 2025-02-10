@@ -76,9 +76,9 @@ document.getElementById("business-form").addEventListener("submit", async functi
     `;
 
     // Параметры Telegram
-    const TELEGRAM_TOKEN = "7665559382:AAFQf5P15TVZUp2e6ozhjX70-PSpZh_c9Nk"; // Замените на ваш токен
-    const CHAT_ID = "-1002211535389"; // Замените на ваш ID чата или канала
-    const URL = `https://api.telegram.org/bot7665559382:AAFQf5P15TVZUp2e6ozhjX70-PSpZh_c9Nk/sendMessage`; // Замените на ваш токен
+    const TELEGRAM_TOKEN = "TELEGRAM_TOKEN"; // Замените на ваш токен
+    const CHAT_ID = "CHAT_ID"; // Замените на ваш ID чата или канала
+    const URL = `https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage`; // Замените на ваш токен
 
     try {
         // Отправка сообщения в Telegram
